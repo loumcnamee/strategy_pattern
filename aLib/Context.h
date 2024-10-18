@@ -4,6 +4,7 @@
 #include "Strategy.h"
 #include <map>
 #include <memory>
+#include <map>
 
 using namespace std;
 
@@ -14,29 +15,30 @@ class Context
 {
 
 private:
+    unsigned int _numStrategies = 0;
+    unsigned int _strategy; //selectegy strategy to execute
+    
+    std::map<unsigned int, Strategy*> _strategies;
     std::unique_ptr<Strategy> strategy_;
     /**
      * Usually, the Context accepts a strategy through the constructor, but also
      * provides a setter to change it at runtime.
      */
 public:
-    explicit Context(std::unique_ptr<Strategy> &&strategy = {}) : strategy_(std::move(strategy))
-    {
-    }
+    Context(); //(std::unique_ptr<Strategy> &&strategy = {}) : strategy_(std::move(strategy))
     
     /**
      * Usually, the Context allows replacing a Strategy object at runtime.
      */
-    void set_strategy(std::unique_ptr<Strategy> strategy)
-    {
-        strategy_ = std::move(strategy);
-    }
+    void add_strategy(std::unique_ptr<Strategy> strategy);
+
+    bool setStrategy(int index);
     
     /**
      * The Context delegates some work to the Strategy object instead of
      * implementing +multiple versions of the algorithm on its own.
      */
-    void doStuff() const;
+    float calculateMean(std::vector<float>) const;
     
 };
   

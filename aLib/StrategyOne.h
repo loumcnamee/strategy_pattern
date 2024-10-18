@@ -12,7 +12,7 @@ private:
 public:
   StrategyOne();
   ~StrategyOne();
-  void doStuff();
+  float mean(std::vector<float>);
 
 };
 
