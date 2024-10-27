@@ -33,6 +33,8 @@ public:
     void add_strategy(std::unique_ptr<Strategy> strategy);
 
     bool setStrategy(int index);
+
+    unsigned int getMode() const;
     
     /**
      * The Context delegates some work to the Strategy object instead of

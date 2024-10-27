@@ -26,6 +26,11 @@ bool Context::setStrategy(int index) {
 
     return result;
 }
+
+unsigned int Context::getMode() const {
+    return _strategy;
+}
+
 float Context::calculateMean(std::vector<float> data) const
     {
         float result = 0.0f;
