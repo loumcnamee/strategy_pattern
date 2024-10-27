@@ -16,7 +16,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(aTest aArithmeticMeanTest.cpp)
+add_executable(aTest aArithmeticMeanTest.cpp aContextTest.cpp)
 
 target_link_libraries(
   aTest LINK_PUBLIC gtest_main
@@ -26,7 +26,7 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-gtest_add_tests(aTest "" aArithmeticMeanTest.cpp)
+gtest_add_tests(aTest "" aArithmeticMeanTest.cpp aContextTest.cpp)
 #gtest_discover_tests(aTest)
 
 #target_include_directories (InvTest PUBLIC "C://git//googletest//googletest//include")
