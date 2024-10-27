@@ -1,6 +1,7 @@
 # Strategy Pattern in C++
-This repo is a working example of the strategy pattern impelemted in C++
+This repo is a working example of the strategy pattern implemented in C++
 
+Refer to https://en.wikipedia.org/wiki/Strategy_pattern for an explanation of this design pattern.
 
 ## Organization
 
@@ -17,13 +18,16 @@ This repo is a working example of the strategy pattern impelemted in C++
 
 ## Toolchain
 
-You will need the following tools to build this project
+By default this project makes use of VSCode integration of with Docker devcontainers.
+The devcontainer used is mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04
+
+Otherwise, you will need the following tools to build this project
 * an operating system to run CMake, the builder, compiler and linker
-** options are
-* CMake
-* a build tool like Make, Ninja, NMake, etc
-* a C++ compiler and linker
-* (optional) an integrated development environment e.g. VS Code, CLion, CodeBlocks, MS Visual Studio
+* options are
+    * CMake
+    * a build tool like Make, Ninja, NMake, etc
+    * a C++ compiler and linker
+    * (optional) an integrated development environment e.g. VS Code, CLion, CodeBlocks, MS Visual Studio
 
 
 ## Helpful References
