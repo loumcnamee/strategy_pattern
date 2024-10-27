@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "StrategyOne.h"
-#include <String>
+#include <string>
 
 // Test constructor, ensure name is correct
 TEST(ArithMeticMeanTest, ConstructorTest) {
